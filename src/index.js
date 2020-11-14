@@ -3,7 +3,7 @@ const axios = require("axios");
 var parser = require("xml2json");
 const _ = require("lodash");
 const { response } = require("express");
-const errorHandling = require("./errorHandling");
+const validate = require("./validate");
 
 const app = express();
 app.use(express.json());
@@ -11,7 +11,7 @@ app.use(express.json());
 app.post("/calculate", async (req, res) => {
   const data = req.body;
 
-  const error = await errorHandling(data);
+  const error = await validate(data);
   if (error) return res.json(error);
 
   try {
