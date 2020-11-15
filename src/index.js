@@ -46,8 +46,8 @@ app.post("/calculate", async (req, res) => {
       }
     );
 
-    let xml = response.data;
-    var json = parser.toJson(xml, { object: true });
+    const xml = response.data;
+    const json = parser.toJson(xml, { object: true });
 
     const { Servicos } = json["soap:Envelope"][
       "soap:Body"
