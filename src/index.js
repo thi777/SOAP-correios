@@ -1,8 +1,6 @@
 const express = require("express");
 const axios = require("axios");
 var parser = require("xml2json");
-const _ = require("lodash");
-const { response } = require("express");
 const validate = require("./validate");
 
 const app = express();
