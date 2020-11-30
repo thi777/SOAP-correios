@@ -1,8 +1,3 @@
-# SOAP-correios
-Calcule frete e prazo diretamente do webservice dos correios
-
-Curl para teste
-
 curl --request POST \
   --url http://localhost:3777/calculate \
   --header 'Content-Type: application/json' \
